@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Sprite : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class Sprite : MonoBehaviour
 
     public float maxSpeed = 10f;
     private bool flipRight = true;
+
+    private float topScore = 0.0f;
+
+    public Text scoreText;
 
     private void Flip()
     {
@@ -38,6 +43,18 @@ public class Sprite : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+
+        if (SpriteRigid.velocity.y > 0 && transform.position.y > topScore)
+        {
+            topScore = transform.position.y - 5;           
+        }
+
+        scoreText.text = "Score: " + Mathf.Round(topScore).ToString();
+
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -46,12 +63,13 @@ public class Sprite : MonoBehaviour
         if (move > 0 && !flipRight)
         {
             Flip();
-        } 
-        
+        }
+
         else if (move < 0 && flipRight)
         {
             Flip();
         }
+       
     }
 
 }

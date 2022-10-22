@@ -14,7 +14,7 @@ public class Platform_Generation : MonoBehaviour
 
         for (int i = 0; i < 50; i++)
         {
-            SpawnerPosition.x = Random.Range(-0.8f, 0.8f);
+            SpawnerPosition.x = Random.Range(-0.6f, 0.6f);
             SpawnerPosition.y += Random.Range(0.6f, 0.6f);
 
             Instantiate(platformPrefab, SpawnerPosition, Quaternion.identity);

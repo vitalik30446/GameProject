@@ -18,8 +18,10 @@ public class Platform : MonoBehaviour
     {
         if (collision.collider.name == "DeadZone")
         {
-            float RandX = Random.Range(-1.7f, 1.7f);
-            float RandY = Random.Range(transform.position.y + 20f, transform.position.y + 22f);
+            float RandX = Random.Range(0f, 0f);
+            float RandY = Random.Range(transform.position.y + 0f, transform.position.y + 0f);
+
+            Destroy(gameObject);
 
             transform.position = new Vector3(RandX, RandY, 0);
         }
