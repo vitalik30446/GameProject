@@ -12,10 +12,10 @@ public class Platform_Generation : MonoBehaviour
     {
         Vector3 SpawnerPosition = new Vector3();
 
-        for (int i = 0; i < 50; i++)
+        for (int i = 0; i < 123; i++)
         {
-            SpawnerPosition.x = Random.Range(-0.6f, 0.6f);
-            SpawnerPosition.y += Random.Range(0.6f, 0.6f);
+            SpawnerPosition.x = Random.Range(-0.7f, 0.8f);
+            SpawnerPosition.y += Random.Range(0.8f, 0.8f);
 
             Instantiate(platformPrefab, SpawnerPosition, Quaternion.identity);
         }
