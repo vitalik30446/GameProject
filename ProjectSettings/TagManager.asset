@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Sprite
+  - Coin
+  - Shop
+  - Menu
+  - Background_1
+  - Background_2
+  - Background_3
+  - Background_4
+  - Background_5
   layers:
   - Default
   - TransparentFX

@@ -17,6 +17,13 @@ public class Sprite : MonoBehaviour
 
     public Text scoreText;
 
+    private GameObject target;
+    private GameObject target2;
+    private GameObject target3;
+    private GameObject target4;
+    private GameObject target5;
+
+
     private void Flip()
     {
         flipRight = !flipRight;
@@ -41,6 +48,13 @@ public class Sprite : MonoBehaviour
         {
             instance = this;
         }
+
+        target = GameObject.FindWithTag("Background_1");
+        target2 = GameObject.FindWithTag("Background_2");
+        target3 = GameObject.FindWithTag("Background_3");
+        target4 = GameObject.FindWithTag("Background_4");
+        target5 = GameObject.FindWithTag("Background_5");
+
     }
 
     void Update()
@@ -53,6 +67,26 @@ public class Sprite : MonoBehaviour
 
         scoreText.text = "Score: " + Mathf.Round(topScore).ToString();
 
+        if (topScore > 99.0f)
+        {
+            target.transform.localPosition = new Vector3(-5.0f, 0f, 0f);
+        }
+
+        if (topScore > 199.0f)
+        {
+            target2.transform.localPosition = new Vector3(-5.0f, 0f, 0f);
+        }
+
+        if (topScore > 299.0f)
+        {
+            target3.transform.localPosition = new Vector3(-5.0f, 0f, 0f);
+        }
+
+        if (topScore > 399.0f)
+        {
+            target4.transform.localPosition = new Vector3(-5.0f, 0f, 0f);
+        }
+        
     }
 
     // Update is called once per frame
