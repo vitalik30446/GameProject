@@ -13,6 +13,41 @@ TagManager:
   - Background_3
   - Background_4
   - Background_5
+  - Trap
+  - lc2
+  - Logo
+  - About
+  - Settings
+  - Exit
+  - st11
+  - st12
+  - st21
+  - st22
+  - st23
+  - st24
+  - st25
+  - st26
+  - st31
+  - st32
+  - sg11
+  - sg21
+  - sg31
+  - bal1
+  - bal2
+  - bal3
+  - bal4
+  - bal5
+  - bal6
+  - bal7
+  - bal8
+  - NM
+  - IL
+  - Sign1
+  - Sign2
+  - Sign3
+  - Sign4
+  - Monsters
+  - Game_Over
   layers:
   - Default
   - TransparentFX
